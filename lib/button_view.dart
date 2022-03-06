@@ -88,6 +88,34 @@ class SignInButton extends StatelessWidget {
           shape: shape,
           height: 36.0,
         );
+      case Buttons.Phone:
+        return SignInButtonBuilder(
+          elevation: elevation,
+          key: const ValueKey('Phone'),
+          mini: mini,
+          text: text ?? 'Sign in with Phone',
+          icon: FontAwesomeIcons.Phone,
+          image: button == Buttons.FacebookNew
+              ? const ClipRRect(
+            child: Image(
+              image: AssetImage(
+                'assets/logos/facebook_new.png',
+                package: 'flutter_signin_button',
+              ),
+              height: 24.0,
+            ),
+          )
+              : null,
+          backgroundColor: button == Buttons.FacebookNew
+              ? const Color(0xFF1877f2)
+              : const Color(0xFF3B5998),
+          innerPadding: button == Buttons.FacebookNew
+              ? const EdgeInsets.fromLTRB(12, 0, 11, 0)
+              : null,
+          onPressed: onPressed,
+          padding: padding,
+          shape: shape,
+        );
       case Buttons.Facebook:
       case Buttons.FacebookNew:
         return SignInButtonBuilder(

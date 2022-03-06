@@ -94,7 +94,7 @@ class SignInButton extends StatelessWidget {
           key: const ValueKey('Phone'),
           mini: mini,
           text: text ?? 'Sign in with Phone',
-          icon: FontAwesomeIcons.Phone,
+          icon: FontAwesomeIcons.phone,
           image: button == Buttons.FacebookNew
               ? const ClipRRect(
             child: Image(
